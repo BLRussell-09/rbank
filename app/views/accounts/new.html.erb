@@ -1,0 +1,24 @@
+<h1>New Account</h1>
+
+<%= form_with scope: :account, url: accounts_path, local: true do |form| %>
+  <p>
+    <%= form.label :account_number %><br>
+    <%= form.number_field :number %>
+  </p>
+  <p>
+    <%= form.label :branch %><br>
+    <%= form.text_field :branch %>
+  </p>
+  <p>
+    <%= form.label :account_type %><br>
+    <%= form.text_field :account_type %>
+  </p>
+  <p>
+    <%= form.label :open_date %>
+    <%= form.date_select :open_date %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

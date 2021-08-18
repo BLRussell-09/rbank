@@ -1,0 +1,36 @@
+<h1>New Member</h1>
+
+<%= form_with scope: :member, url: members_path, local:true do |form| %>
+  <p>
+    <%= form.label :first_name %><br>
+    <%= form.text_field :first_name %>
+  </p>
+  <p>
+    <%= form.label :middle_name %><br>
+    <%= form.text_field :middle_name %>
+  </p>
+  <p>
+    <%= form.label :last_name %><br>
+    <%= form.text_field :last_name %>
+  </p>
+  <p>
+    <%= form.label :home_phone %><br>
+    <%= form.text_field :home_phone %>
+  </p>
+  <p>
+    <%= form.label :work_phone %><br>
+    <%= form.text_field :work_phone %>
+  </p>
+  <p>
+    <%= form.label :cell_phone %><br>
+    <%= form.text_field :cell_phone %>
+  </p>
+  <p>
+    <%= form.label :birthday %><br>
+    <%= form.date_field :birth_day %>
+  </p>
+  <p>
+    <%= form.label :ssn %><br>
+    <%= form.text_field :ssn %>
+  </p>
+<% end %>
