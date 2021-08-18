@@ -1,12 +1,16 @@
 class MembersController < ApplicationController
   def new
+    @article = Article.new
   end
 
   def create
     @member = Member.new(member_params)
 
-    @member.save
-    redirect_to @member
+    if @member.save
+      redirect_to @member
+    else
+      render 'new'
+    end
   end
 
   def show
