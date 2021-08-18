@@ -1,3 +1,4 @@
 class Member < ApplicationRecord
-  validates :ssn, length: { is: 9 }
+  validates :ssn, presence: true,
+                  length: { is: 9 }
 end
